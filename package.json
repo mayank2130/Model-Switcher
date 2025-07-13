@@ -1,0 +1,37 @@
+{
+  "name": "switch-models",
+  "version": "1.0.0",
+  "description": "switch-models",
+  "main": "server.js",
+  "scripts": {
+    "start": "node dist/server.js",
+    "dev": "nodemon src/server.ts",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {
+    "@huggingface/inference": "^4.5.1",
+    "axios": "^1.6.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "helmet": "^7.0.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.0.13",
+    "@types/supertest": "^6.0.3",
+    "@types/uuid": "^10.0.0",
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.1",
+    "supertest": "^6.3.3",
+    "typescript": "^5.8.3"
+  },
+  "keywords": [],
+  "license": "ISC"
+}

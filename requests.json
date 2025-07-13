@@ -1,0 +1,14 @@
+[
+  {
+    "id": "3d11c9b1-8a23-43fc-9a79-fc4437c33ed4",
+    "timestamp": "2025-07-13T14:37:48.483Z",
+    "prompt": "Write a short story",
+    "response": "{\"title\":\"The Last Library\",\"story\":\"In a city where paper was forbidden, Mara discovered a rusted door beneath the ruins of an old subway. Inside, dust floated like ash in the beam of her flashlight, settling on shelves that still sagged with books. She opened one; its spine cracked like a knuckle. Words fluttered up, settling into her eyes, and suddenly she could taste forgotten summers, hear her grandmother humming lullabies that had been erased from every speaker. When the patrol drones whined overhead, she pressed the book to her chest and felt its stories seep through her skin, turning her pulse into a quiet rebellion. She left the door unlocked.\"}",
+    "latency_ms": 19798,
+    "input_tokens": 28,
+    "output_tokens": 140,
+    "total_tokens": 168,
+    "model": "kimi-k2",
+    "status": "success"
+  }
+]

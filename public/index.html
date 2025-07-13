@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Model LLM Service</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🤖 Multi-Model LLM Service</h1>
+            <p>Compare responses from different language models</p>
+        </header>
+
+        <main class="main">
+            <div class="chat-section">
+                <div class="input-section">
+                    <div class="model-selector">
+                        <label for="model-select">Select Model:</label>
+                        <select id="model-select" class="model-select">
+                            <option value="">Loading models...</option>
+                        </select>
+                    </div>
+
+                    <div class="prompt-section">
+                        <label for="prompt-input">Your Prompt:</label>
+                        <textarea 
+                            id="prompt-input" 
+                            class="prompt-input" 
+                            placeholder="Enter your prompt here... e.g., 'Write a short story about a robot learning to paint'"
+                            rows="4"
+                        ></textarea>
+                    </div>
+
+                    <div class="options-section">
+                        <div class="option-group">
+                            <label for="temperature">Temperature: <span id="temp-value">0.7</span></label>
+                            <input type="range" id="temperature" min="0.1" max="2.0" step="0.1" value="0.7">
+                        </div>
+                        <div class="option-group">
+                            <label for="max-tokens">Max Tokens: <span id="tokens-value">150</span></label>
+                            <input type="range" id="max-tokens" min="50" max="500" step="10" value="150">
+                        </div>
+                    </div>
+
+                    <button id="generate-btn" class="generate-btn">
+                        <span class="btn-text">Generate Response</span>
+                        <div class="spinner" style="display: none;"></div>
+                    </button>
+                </div>
+
+                <div class="response-section">
+                    <div class="response-header">
+                        <h3>Response</h3>
+                        <div class="response-meta" id="response-meta" style="display: none;">
+                            <span class="model-name" id="model-name"></span>
+                            <span class="latency" id="latency"></span>
+                            <span class="tokens" id="tokens"></span>
+                        </div>
+                    </div>
+                    <div class="response-content" id="response-content">
+                        <div class="placeholder">
+                            <p>💭 Your AI response will appear here</p>
+                            <p>Select a model and enter a prompt to get started</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="stats-section">
+                    <h3>📊 Statistics</h3>
+                    <div class="stats-content" id="stats-content">
+                        <div class="stat-item">
+                            <span class="stat-label">Total Requests:</span>
+                            <span class="stat-value" id="total-requests">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Avg Latency:</span>
+                            <span class="stat-value" id="avg-latency">0ms</span>
+                        </div>
+                    </div>
+                    <button id="refresh-stats" class="refresh-btn">↻ Refresh</button>
+                </div>
+
+                <div class="recent-logs">
+                    <h3>📝 Recent Requests</h3>
+                    <div class="logs-content" id="logs-content">
+                        <p class="no-logs">No requests yet</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
