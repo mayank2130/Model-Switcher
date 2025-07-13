@@ -27,25 +27,21 @@ npm start
 5. **Open your browser**
 Navigate to `http://localhost:3000`
 
-## 🛠️ Development
+## 🧪 Testing
 
-### Scripts
+Run the test suite:
 ```bash
-npm run dev     # Development with auto-reload
-npm run build   # Compile TypeScript
-npm start       # Run production server
+npm run build
+npm test
 ```
 
-### Project Structure
-```
-├── src/
-│   ├── server.ts    # Express server
-│   ├── model.ts     # AI model integration
-│   └── logger.ts    # Request logging
-├── public/          # Frontend files
-├── dist/           # Compiled TypeScript
-└── requests.json   # Request logs (auto-generated)
-```
+The tests cover:
+- Health check endpoint
+- Models listing
+- Request validation
+- Response generation
+- Logging functionality
+- Statistics tracking
 
 ## 🤖 Available Models
 
@@ -78,15 +74,6 @@ curl -X POST http://localhost:3000/generate \
   }'
 ```
 
-### Environment Variables
-- `PORT` - Server port (default: 3000)
-- `HF_TOKEN` - Hugging Face API token
-
-### Model Options
-- `temperature` - Creativity level (0.1-2.0)
-- `max_tokens` - Response length (50-500)
-- `top_p` - Nucleus sampling (0.1-1.0)
-
 ## 📊 Data & Logging
 
 Requests are automatically logged to `requests.json` with:
@@ -102,8 +89,3 @@ Make sure to set your `HF_TOKEN` in production environment.
 ## 📝 License
 
 MIT License - see LICENSE file for details.
-
-## 🔗 Links
-
-- [Hugging Face Inference API](https://huggingface.co/docs/api-inference)
-- [Novita Provider Docs](https://novita.ai/docs) 

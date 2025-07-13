@@ -175,9 +175,12 @@ app.use("*", (req, res) => {
   res.status(404).json({ error: "Route not found" });
 });
 
-app.listen(PORT, () => {
-  console.log(`🚀 Multi-Model LLM Service running on port ${PORT}`);
-  console.log(`🤖 Models: http://localhost:${PORT}/models`);
-});
+// Only start the server if this file is run directly (not during testing)
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`🚀 Multi-Model LLM Service running on port ${PORT}`);
+    console.log(`🤖 Models: http://localhost:${PORT}/models`);
+  });
+}
 
 module.exports = app;

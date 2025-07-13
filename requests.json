@@ -10,5 +10,31 @@
     "total_tokens": 168,
     "model": "kimi-k2",
     "status": "success"
+  },
+  {
+    "id": "a5e06afd-4dc5-4a93-bb80-88af085326ba",
+    "timestamp": "2025-07-13T15:26:25.321Z",
+    "model": "kimi-k2",
+    "modelName": "Kimi-K2-Instruct",
+    "prompt": "Hello, world!",
+    "response": "{\"response\":\"Hello, world!\"}",
+    "latency_ms": 7697,
+    "input_tokens": 27,
+    "output_tokens": 9,
+    "total_tokens": 36,
+    "status": "success"
+  },
+  {
+    "id": "e13f17ed-55f5-4a2e-9851-b09f201ab330",
+    "timestamp": "2025-07-13T15:27:21.818Z",
+    "model": "kimi-k2",
+    "modelName": "Kimi-K2-Instruct",
+    "prompt": "Hello, world!",
+    "response": "{\"response\":\"Hello, world!\"}",
+    "latency_ms": 4658,
+    "input_tokens": 27,
+    "output_tokens": 9,
+    "total_tokens": 36,
+    "status": "success"
   }
 ]
